@@ -27,24 +27,32 @@ Let's now be more specific about what it means to retrieve a pattern. The update
 Importantly, we never work directly with the energy function, because of course that gives us direct access to the stored pattern. Instead, we use an update rule which is formulated so as to minimise this energy function (possibly over several steps).
 
 The modern (binary) Hopfield networks are characterised by the energy function
+
 $$
 -\exp(\text{lse}(1, \mathbf{\xi X}^T))\ ,
 $$
+
 where $\mathbf{\xi}$ is our query (input) vector, $\mathbf{X}=\begin{pmatrix}\mathbf{x}_1&\mathbf{x}_2&\cdots&\mathbf{x}_N\end{pmatrix}$ is a matrix of $N$ stored patterns, and $\text{lse}(\cdot)$ denotes the log-sum-exp function. The exponentiation is brought about by a generalisation proposed by [Demircigil et al. (2017)](https://arxiv.org/pdf/1702.01929.pdf) to give an exponential storage capacity of $N=2^{d/2}$ for binary patterns, where $d$ is the dimensionality of our binary vectors (strings).
 
 A new continuous energy function is proposed to retain the properties of the modern Hopfield network (i.e. exponential capacity and fast convergence) while generalising to continuous queries;
+
 $$
 -\text{lse}(\beta,\mathbf{\xi X}^T)+\frac{1}{2}\mathbf{\xi}^T\mathbf{\xi}+\beta^{-1}\log N+\frac{1}{2}M^2\ ,
 $$
+
 for $\beta>0$, with the quadratic term ensuring that the norm of the state vector $\mathbf{\xi}$ remains finite and the energy is bounded (which comes as a natural consequence of continuity), and where $M=\max_i\|\mathbf{x}_i\|$ is the largest stored pattern. Specifically, the bounding of the energy is $0\leq E\leq 2M^2$.
 
 The paper goes on to define the novel update rule from their energy function as
+
 $$
 \mathbf{\xi}^\text{new}=\mathbf{X}\ \text{softmax}(\beta\mathbf{X}^T\mathbf{\xi})\ ,
 $$
+
 which they immediately then prove to converge globally. This can be shown to be equivalent to a transformer's attention-based mechanism
+
 $$
 \mathbf{V}\ \text{softmax}\bigg(\frac{1}{\sqrt{d_k}}\mathbf{QK}^T\bigg)\ ,
 $$
+
 which allows us to consider attention mechanisms as a continuous Hopfield network.
 
