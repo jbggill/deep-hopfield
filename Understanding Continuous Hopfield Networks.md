@@ -32,7 +32,7 @@ $$
 -\exp(\text{lse}(1, \mathbf{\xi X}^T))\ ,
 $$
 
-where $\mathbf{\xi}$ is our query (input) vector, $\mathbf{X}=\begin{pmatrix}\mathbf{x}_1&\mathbf{x}_2&\cdots&\mathbf{x}_N\end{pmatrix}$ is a matrix of $N$ stored patterns, and $\text{lse}(\cdot)$ denotes the log-sum-exp function. The exponentiation is brought about by a generalisation proposed by [Demircigil et al. (2017)](https://arxiv.org/pdf/1702.01929.pdf) to give an exponential storage capacity of $N=2^{d/2}$ for binary patterns, where $d$ is the dimensionality of our binary vectors (strings).
+where $\mathbf{\xi}$ is our query (input) vector, $\mathbf{X}=(\mathbf{x}_1,\mathbf{x}_2,\dots,\mathbf{x}_N)$ is a matrix of $N$ stored patterns, and $\text{lse}(\cdot)$ denotes the log-sum-exp function. The exponentiation is brought about by a generalisation proposed by [Demircigil et al. (2017)](https://arxiv.org/pdf/1702.01929.pdf) to give an exponential storage capacity of $N=2^{d/2}$ for binary patterns, where $d$ is the dimensionality of our binary vectors (strings).
 
 A new continuous energy function is proposed to retain the properties of the modern Hopfield network (i.e. exponential capacity and fast convergence) while generalising to continuous queries;
 
