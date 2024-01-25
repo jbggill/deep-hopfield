@@ -16,6 +16,9 @@ The Hopfield is all you need paper refer to Hopfield Pooling layers, which makes
 #segmentation
 Hopfield networks may be naturally perfect for image segmentation. It could easily be argued that a raw image is a partial cue and the layers or interesting portion of the image is the pattern to be recognised, and it is essentially shrouded in noise. A critical application of this is for medical applications; e.g. [lesion segmentation](https://paperswithcode.com/task/lesion-segmentation).
 
+#theory
+The Hopfield is all you need paper has been informally criticised online for its lack of addressing exactly *how* memories should be created automatically (since Hopfield networks are auto-associative). They seem to suggest that every content-based memory lookup in a neural network, with some non-linearity, is some sort of one-step Hopfield Network, which is to say that the networks are converging on learned states. However, the authors do not spend much time describing how these states come to be learned, other than the general spookiness of neural networks doing what we'd like them to.
+
 ---
 
 # Literature
