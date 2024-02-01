@@ -19,6 +19,9 @@ Hopfield networks may be naturally perfect for image segmentation. It could easi
 #theory
 The Hopfield is all you need paper has been informally criticised online for its lack of addressing exactly *how* memories should be created automatically (since Hopfield networks are auto-associative). They seem to suggest that every content-based memory lookup in a neural network, with some non-linearity, is some sort of one-step Hopfield Network, which is to say that the networks are converging on learned states. However, the authors do not spend much time describing how these states come to be learned, other than the general spookiness of neural networks doing what we'd like them to.
 
+#theory
+Hopfield networks may be an interesting way to *preemptively* bias a network's weights based on the input. For example, in a classification, we might want to use some sort of small pre-classification network based on Hopfield layers to provide a (soft) weight mask to overlay onto the main classifying networks weights to bias them towards a particular type of classification. The pre-classifying model may be able to influence the choice of classification style or reduce the likelihood for overfitting by forming a more intelligent way of doing dropout. I haven't seen any work on this -- not that I have looked -- but I like this idea, and it fits with our other ideas about pre-emptive AI for deep learning applications. This might even be a path into general AI that is able to select pathways of computation based on input, giving it the ability to do arbitrarily many things based on the input it is given. 
+
 ---
 
 # Literature
