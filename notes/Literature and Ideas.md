@@ -16,6 +16,7 @@ The Hopfield is all you need paper refer to Hopfield Pooling layers, which makes
 #segmentation
 Hopfield networks may be naturally perfect for image segmentation. It could easily be argued that a raw image is a partial cue and the layers or interesting portion of the image is the pattern to be recognised, and it is essentially shrouded in noise. A critical application of this is for medical applications; e.g. [lesion segmentation](https://paperswithcode.com/task/lesion-segmentation).
 
+
 #theory
 The Hopfield is all you need paper has been informally criticised online for its lack of addressing exactly *how* memories should be created automatically (since Hopfield networks are auto-associative). They seem to suggest that every content-based memory lookup in a neural network, with some non-linearity, is some sort of one-step Hopfield Network, which is to say that the networks are converging on learned states. However, the authors do not spend much time describing how these states come to be learned, other than the general spookiness of neural networks doing what we'd like them to.
 
@@ -31,3 +32,7 @@ State-of-the-art image compression is reported by [Hillar et al. (2014)](https:/
 
 #LLM
 I read somewhere that protein classification (e.g. [Håndstad et al., (2007)](https://link.springer.com/article/10.1186/1471-2105-8-23)) can be brought to state-of-the-art using LSTMs, and then LSTMs can be exchanged like-for-like for continuous Hopfield networks (as they are equivalent to an attention mechanism with the added generality of iterability, as useless as that may be).
+
+#Learned Image Compression with Transformers 
+Parallel learned image compression using CNN's to model local features and transformers for non-local features 
+https://github.com/jmliu206/LIC_TCM
