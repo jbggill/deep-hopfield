@@ -29,5 +29,12 @@ Hopfield networks may be an interesting way to *preemptively* bias a network's w
 #compression
 State-of-the-art image compression is reported by [Hillar et al. (2014)](https://redwood.berkeley.edu/wp-content/uploads/2018/01/hillar2014hopfield.pdf) using modern Hopfield networks. We might be able to smash it out the park with a hybrid architecture between a continuous Hopfield network and autoencoder.
 
+Neural Image Compression and Explanation, XIANG LI and SHIHAO JI
+https://arxiv.org/pdf/1908.08988.pdf
+The NICE framework integrates explanaibility and compression into one trainable pipeline. The goal is to develop an approach for classification or segementation that can explain the approach of a neural network in response to an input image while also reducing storage cost of the image using compression such that the compressed image has similar classification accuracy to the original image. 
+A key idea is to generate a mask to transform the original image into a mixed resolution image, retaining the original information in the salient regions and using low resolution in the backgrounds
+
 #LLM
 I read somewhere that protein classification (e.g. [Håndstad et al., (2007)](https://link.springer.com/article/10.1186/1471-2105-8-23)) can be brought to state-of-the-art using LSTMs, and then LSTMs can be exchanged like-for-like for continuous Hopfield networks (as they are equivalent to an attention mechanism with the added generality of iterability, as useless as that may be).
+
+
