@@ -97,3 +97,4 @@ class ISICDataset(Dataset):
 
         # Damage by random corruption -- zeroing random pixels.
         if damage_method == 'random-corrupt':
+            pass

@@ -37,4 +37,5 @@ A key idea is to generate a mask to transform the original image into a mixed re
 #LLM
 I read somewhere that protein classification (e.g. [Håndstad et al., (2007)](https://link.springer.com/article/10.1186/1471-2105-8-23)) can be brought to state-of-the-art using LSTMs, and then LSTMs can be exchanged like-for-like for continuous Hopfield networks (as they are equivalent to an attention mechanism with the added generality of iterability, as useless as that may be).
 
-
+#reconstruction #energy
+Very recently, [this lot](https://proceedings.neurips.cc/paper_files/paper/2023/file/57a9b97477b67936298489e3c1417b0a-Paper-Conference.pdf) from IBM have combined attention mechanisms, energy-based models, and associative memory (exactly as we intend to) and demonstrate reconstruction as one of their aims. I'm not too sure whether it is the same idea as our "test-time reconstruction", but it's certainly similar. They also cite this *Hopfield is all you need* paper.
